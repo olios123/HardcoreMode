@@ -1,0 +1,81 @@
+#
+# CC Creative Commons 2022
+# Uznanie autorstwa - Bez utworów zależnych 4.0 Międzynarodowe
+# Autor olios
+#
+
+# Możesz używać kolorów w wiadomościach
+# https://minecraft.fandom.com/wiki/Formatting_codes
+
+# WAŻNE!
+# Każde zmiany w tym pliku wymagają przeładowania serwera lub jego restartu
+
+#   _       ___     ___   ___
+#  | |     / _ \   / __| |_ _|
+#  | |__  | (_) | | (_ |  | |
+#  |____|  \___/   \___| |___|
+#
+enable-plugin: "Plugin HardcoreMode został włączony"
+disable-plugin: "Plugin HardcoreMode został wyłączony"
+loaded-language-file: "Plik językowy ${languageCode}.yml został załadowany"
+language-file-not-found: "Nie znaleziono pliku językowego ${languageCode}.yml. Plik en.yml został załadowany"
+reload-complete: "Pomyślnie przeładowano konfigurację pluginu HardcoreMode"
+#   ___  __   __  ___   _____   ___   __  __     ____ __   __   ___
+#  / __| \ \ / / / __| |_   _| | __| |  \/  |   |_  / \ \ / /  / __|
+#  \__ \  \ V /  \__ \   | |   | _|  | |\/| |    / /   \ V /  | (__
+#  |___/   |_|   |___/   |_|   |___| |_|  |_|   /___|   |_|    \___|
+#
+lost-life: "&7[&4&lHardcore &c&lMode&r&7]&r &cZginąłeś i straciłeś jedno ze swoich żyć"
+renewed-life: "&aJedno z twoich żyć zostało odnowione"
+#   _  __   ___    __  __   ___   _  _   ___   __   __
+#  | |/ /  / _ \  |  \/  | | __| | \| | |   \  \ \ / /
+#  | ' <  | (_) | | |\/| | | _|  | .` | | |) |  \ V /
+#  |_|\_\  \___/  |_|  |_| |___| |_|\_| |___/    |_|
+#
+cmd-lives-show: "&aLiczba żyć będzie od teraz widoczna"
+cmd-lives-hide: "&aLiczba żyć będzie od teraz ukryta"
+cmd-lives-set: "&aIlość żyć dla gracza &f${player} &azostała zmieniona na &f${count}"
+cmd-lives-add: "&aTIlość żyć dla gracza &f${player} &azostała powiększona o &f${count}"
+cmd-lives-remove: "&aIlość żyć dla gracza &f${player} &azostała pomniejszona o &f${count}"
+cmd-lives-incorrect-use: "&cUżyłeś tej komendy niewłaściwie. Pomoc &f/hardcoremode"
+cmd-lives-player-not-found: "&cWskazany gracz nie został znaleziony"
+cmd-lives-amount-is-not-number: "&cPodana wartość nie jest liczbą"
+#   ___   ___   ___   __  __   ___   ___      _   ___
+#  | _ \ | __| | _ \ |  \/  | |_ _| / __|  _ | | | __|
+#  |  _/ | _|  |   / | |\/| |  | |  \__ \ | || | | _|
+#  |_|   |___| |_|_\ |_|  |_| |___| |___/  \__/  |___|
+#
+no-permissions: "&cNie masz wystarczających permisji aby użyć tej komendy"
+console-command: "&cNie możesz użyć tej komendy z konsoli"
+#     _     ___    __  __   ___   _  _
+#    /_\   |   \  |  \/  | |_ _| | \| |
+#   / _ \  | |) | | |\/| |  | |  | .` |
+#  /_/ \_\ |___/  |_|  |_| |___| |_|\_|
+#
+player-reload-complete: "&aPomyślnie przeładowano konfigurację pluginu HardcoreMode"
+#   ___    ___    __  __    ___     ___
+#  | _ \  / _ \  |  \/  |  / _ \   / __|
+#  |  _/ | (_) | | |\/| | | (_) | | (__
+#  |_|    \___/  |_|  |_|  \___/   \___|
+#
+help:
+  - "&c❤ &4&lHardcore &c&lMode &r&c❤"
+  - "&6Komendy:"
+  - "&ahardcoremode &6- &fpokazuje pomoc dla tego pluginu (to co teraz widzisz)"
+  - "&ahardcoremode reload &6- &fprzeładowuje konfiguracje pluginu HardcoreMode"
+  - "&alives <hide/show> &6- &fpokazyje lub ukrywa informacje o życiach"
+  - "&alives <add/set/remove> [player] [ilość] &6- &fzarządzanie życiami graczy (admin)"
+  - "&6Permisje:"
+  - "&ahardcoremode.* &6- &fwszystkie permisje dla pluginu HardcoreMode"
+  - "&ahardcoremode.reload &6- &fdostęp do komendy &ahardcoremode reload"
+  - "&ahardcoremode.lives &6- &fdostęp do komendy &alives <add/set/remove> (admin)"
+  - ""
+  - "&6Potrzebujesz pomocy?"
+  - "&a${link}"
+  - "&c❤ &4&lHardcore &c&lMode &r&c❤"
+#    _     _  __  _____   _   _     _     _      ___   ____    _      ___      _   ___
+#   /_\   | |/ / |_   _| | | | |   /_\   | |    |_ _| |_  /   /_\    / __|  _ | | | __|
+#  / _ \  | ' <    | |   | |_| |  / _ \  | |__   | |   / /   / _ \  | (__  | || | | _|
+# /_/ \_\ |_|\_\   |_|    \___/  /_/ \_\ |____| |___| /___| /_/ \_\  \___|  \__/  |___|
+#
+update: "Dostępna jest nowsza wersja pluginu HardcoreMode, możesz ją pobrać z tego linku &a${link}"

@@ -1,0 +1,296 @@
+#
+# CC Creative Commons 2022
+# Attribution-NoDerivatives 4.0 International
+# Author olios
+#
+
+#   ___   _      _   _    ___   ___   _  _
+#  | _ \ | |    | | | |  / __| |_ _| | \| |
+#  |  _/ | |__  | |_| | | (_ |  | |  | .` |
+#  |_|   |____|  \___/   \___| |___| |_|\_|
+#
+
+# IMPORTANT!
+# Any changes to this file require the server to be reloaded or restarted
+# Removing variables will cause the plugin to malfunction
+# You can download the original, unmodified files from plugin page
+# https://www.spigotmc.org/resources/authors/olios123.1116758/
+
+# You will get a notification when a newer plugin version is released
+check-updates: true
+
+# Plugin language
+# You can create your own .yml language files or edit existing ones
+language: en
+
+# The plugin logs will be displayed in green
+clearer-logs: false
+
+#   _  _     _     ___   ___     ___    ___    ___   ___     __  __    ___    ___    ___
+#  | || |   /_\   | _ \ |   \   / __|  / _ \  | _ \ | __|   |  \/  |  / _ \  |   \  | __|
+#  | __ |  / _ \  |   / | |) | | (__  | (_) | |   / | _|    | |\/| | | (_) | | |) | | _|
+#  |_||_| /_/ \_\ |_|_\ |___/   \___|  \___/  |_|_\ |___|   |_|  |_|  \___/  |___/  |___|
+#
+
+# If you want to unban a player, enter in chat /pardon [player]
+
+# The type of ban determines whether the bans should be longer and longer over time, or whether their length should always be the same
+ban-type: "increasing" # The time of each ban is getting longer and longer
+#ban-type: "constant" # The time of each ban is the same
+
+# //------------------------\\
+# |  Constant configuration  |
+# \\------------------------//
+
+# Ban time in minutes and seconds
+# Used when "constant" is selected for "ban-type"
+# You can also set the time in minutes and seconds
+# For example: 15.5 - the ban will last 15 minutes and 30 seconds
+# The value after the dot represents the part of the minute
+ban-time: 15
+#ban-time: 15.5 # 15min 30sec
+
+# Ban length depends on rank
+# Used when you have selected "constant" in the "ban-type" section
+# Enter the length of the ban in minutes
+# In order for the plugin to recognize that the player has the indicated rank,you need to add permissions with the name of the rank
+# For example: vip: 15 -> permission "vip"
+# The plugin checks from the highest (the lowest position) to the lowest rank
+# The plugin requires you to keep the "default" value - don't rename this variable
+ban-rank-time:
+  enable: false # true - enable / false - disable
+  ranks:
+    default: 15
+    vip: 10
+    mvip: 5
+    admin: 0 # The player will not receive a ban
+
+# //------------------------\\
+# | Increasing configuration |
+# \\------------------------//
+
+# Ban lengths
+# Used if "increasing" is selected for the "ban-type" setting
+# The ban time should be given in minutes
+# The player will be banned for a longer time after each subsequent death
+#
+#        1:                 15
+#   death number       time in minutes
+#
+# Another example with seconds: 15.5 - 15 minutes and 30 seconds
+#
+ban-length:
+  1: 15 # 15min
+  2: 30 # 30min
+  3: 60 # 1h
+  4: 360 # 6h
+  5: 1440 # 24h
+  #1: 15.5 # 15min 30sec
+
+# Ban length depends on rank
+# Used if "increasing" is selected for the "ban-type" setting
+# The player will be banned for a longer time after each subsequent death
+# In order for the plugin to recognize that the player has the indicated rank, you need to add permissions with the name of the rank
+# For example: vip: 15 -> permission "vip"
+# Unranked players will be assigned to the default group
+# The plugin checks from the highest (lowest position) to the lowest rank
+# The plugin requires you to keep the "default" value - don't rename this variable
+ban-rank-length:
+  enable: false # true - enable / false - disable
+  ranks:
+    # default
+    default:
+      1: 15 # 15min
+      2: 30 # 30min
+      3: 60 # 1h
+      4: 360 # 6h
+      5: 1440 # 24h
+
+    # vip
+    vip:
+      1: 10 # 10min
+      2: 20 # 20min
+      3: 45 # 45min
+      4: 300 # 5h
+      5: 1200 # 20h
+
+    # mvip
+    mvip:
+      1: 5 # 5min
+      2: 15 # 15min
+      3: 30 # 30min
+      4: 240 # 4h
+      5: 960 # 16h
+
+    # admin
+    admin:
+      1: 0 # The player will not be banned
+
+# //-------------------------\\
+# |  Ban level configuration  |
+# \\-------------------------//
+
+# Reducing the length of the ban
+# If the player does not die for a long time, his ban will be reduced
+lowering-ban:
+  enable: true # default true
+  time-without-death: 360 # Time without a ban to lower its level - default 360min (6h) (you can use seconds example. 360.5 - 360min and 30sec)
+  lowered-level: 1 # The amount of how many levels the ban level will decrease
+
+# //-------------------------\\
+# |    Lives configuration    |
+# \\-------------------------//
+
+# Pre-ban players can have multiple lives
+# After dying, the player loses a life, and when he has no more lives, he is banned
+lives:
+  enable: true # true - enable / false - disable
+
+  # The player can turn the information about lives on and off
+  toggle-info: true
+  default-visible: true # Sets whether the player should immediately see their lives or must turn them on with a command
+
+  # The information will be displayed above the player's inventory bar
+  bar-info: "&c> &4> &c>   ❤ ${lives} &fLives &c❤   < &4< &c<"
+
+  # Initial number of lives
+  default-count: 3
+
+  # The player will receive life some time after the last death
+  # The number of lives added will not be greater than the initial amount
+  renewing-lives:
+    enable: true # true - enable / false - disable
+    time-without-death: 360 # Time to add one life (default 360min = 6h)
+
+#     _     ___    __  __   ___   _  _      ___    ___   _____   ___    ___    _  _   ___
+#    /_\   |   \  |  \/  | |_ _| | \| |    / _ \  | _ \ |_   _| |_ _|  / _ \  | \| | / __|
+#   / _ \  | |) | | |\/| |  | |  | .` |   | (_) | |  _/   | |    | |  | (_) | | .` | \__ \
+#  /_/ \_\ |___/  |_|  |_| |___| |_|\_|    \___/  |_|     |_|   |___|  \___/  |_|\_| |___/
+#
+
+# Do not ban if the player who dies is the administrator (op)
+admin-no-ban-after-death: false
+
+# Do not ban if the player who dies has this permission
+# You need to add the *hardcoremode.nodeath* permission to the player
+# The player will not lose life or be banned after death
+
+#    ___   _  _     _     _____
+#   / __| | || |   /_\   |_   _|
+#  | (__  | __ |  / _ \    | |
+#   \___| |_||_| /_/ \_\   |_|
+#
+
+# Send information about the death of a player in chat (enter null to disable or leave this space blank)
+death-message: "&4&lHardcore Mode |&r &cPlayer &f&l${player} &cdied and he can be back on the server in &f&l${time}"
+
+# After returning to the server, send information to the player about his next ban time (enter null to disable or leave this space blank)
+next-death-info-message: "&7[&4&lHardcore &c&lMode&r&7]&r &cYour time of death is over. The next ban length will be &f&l${time}"
+
+# Information about the ban
+ban-reason:
+  - "&4&lHardcore Mode"
+  - "&r&cYou died and you got banned on time &f&l${time}"
+  - "&cThe ban ends &f&l${date}"
+  - ""
+  - "${reason}"
+
+#
+# THIS OPTION MAY CONTAIN ERRORS RELATED TO ACCESSING THE KILLER OF THE PLAYER
+#
+# The reasons for the death
+# For this option to be used it must be turned on
+# Otherwise the plugin will send a "death-message"
+death-reason-enable: true
+death-reason:
+  # If the player received a ban
+  BLOCK_EXPLOSION:      "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fexploded &cand can be back on the server in &f&l${time}"
+  CONTACT:              "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas chained to death &cand can be back on the server in &f&l${time}"
+  DRAGON_BREATH:        "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdied from the breath of the dragon &cand can be back on the server in &f&l${time}"
+  DROWNING:             "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdrowned &cand can be back on the server in &f&l${time}"
+  ENTITY_ATTACK:        "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas killed by &l${killer}&r &cand can be back on the server in &f&l${time}"
+  ENTITY_EXPLOSION:     "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdied from the blast &cand can be back on the server in &f&l${time}"
+  FALL:                 "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ffell from a high place &cand can be back on the server in &f&l${time}"
+  FALLING_BLOCK:        "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas pinned down by a falling block &cand can be back on the server in &f&l${time}"
+  FIRE:                 "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fburned alive &cand can be back on the server in &f&l${time}"
+  FIRE_TICK:            "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fburned alive &cand can be back on the server in &f&l${time}"
+  FLY_INTO_WALL:        "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fflew into the wall &cand can be back on the server in &f&l${time}"
+  FREEZE:               "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ffroze &cand can be back on the server in &f&l${time}"
+  HOT_FLOOR:            "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdiscovered that the floor was lava &cand can be back on the server in &f&l${time}"
+  LAVA:                 "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ftried to swim in lava &cand can be back on the server in &f&l${time}"
+  LIGHTNING:            "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas struck by lightning &cand can be back on the server in &f&l${time}"
+  MAGIC:                "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas killed by magic by &l${killer}&r &cand can be back on the server in &f&l${time}"
+  POISON:               "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas poisoned &cand can be back on the server in &f&l${time}"
+  PROJECTILE:           "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas shot by &l${killer}&r &cand can be back on the server in &f&l${time}"
+  SONIC_BOOM:           "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fhe died from the shock wave &cand can be back on the server in &f&l${time}"
+  STARVATION:           "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fhe died of starvation &cand can be back on the server in &f&l${time}"
+  SUFFOCATION:          "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas bricked up in the wall  &cand can be back on the server in &f&l${time}"
+  SUICIDE:              "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fcommit suicide &cand can be back on the server in &f&l${time}"
+  THORNS:               "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas killed trying to hurt &l${killer}&r &cand can be back on the server in &f&l${time}"
+  VOID:                 "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ffell out of the world &cand can be back on the server in &f&l${time}"
+  WITHER:               "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwithered away &cand can be back on the server in &f&l${time}"
+  OTHER:                "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdied &cand can be back on the server in &f&l${time}"
+
+  # If the player has not received a ban
+  NO_BAN_BLOCK_EXPLOSION:  "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fexploded &cbut he wasn't banned"
+  NO_BAN_CONTACT:          "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas chained to death &cbut he wasn't banned"
+  NO_BAN_DRAGON_BREATH:    "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdied from the breath of the dragon &cbut he wasn't banned"
+  NO_BAN_DROWNING:         "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdrowned &cbut he wasn't banned"
+  NO_BAN_ENTITY_ATTACK:    "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas killed by &l${killer}&r &cbut he wasn't banned"
+  NO_BAN_ENTITY_EXPLOSION: "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdied from the blast &cbut he wasn't banned"
+  NO_BAN_FALL:             "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ffell from a high place &cbut he wasn't banned"
+  NO_BAN_FALLING_BLOCK:    "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas pinned down by a falling block &cbut he wasn't banned"
+  NO_BAN_FIRE:             "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fburned alive &cbut he wasn't banned"
+  NO_BAN_FIRE_TICK:        "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fburned alive &cbut he wasn't banned"
+  NO_BAN_FLY_INTO_WALL:    "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fflew into the wall &cbut he wasn't banned"
+  NO_BAN_FREEZE:           "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ffroze &cbut he wasn't banned"
+  NO_BAN_HOT_FLOOR:        "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdiscovered that the floor was lava &cbut he wasn't banned"
+  NO_BAN_LAVA:             "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ftried to swim in lava &cbut he wasn't banned"
+  NO_BAN_LIGHTNING:        "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas struck by lightning &cbut he wasn't banned"
+  NO_BAN_MAGIC:            "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas killed by magic by &l${killer}&r &cbut he wasn't banned"
+  NO_BAN_POISON:           "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas poisoned &cbut he wasn't banned"
+  NO_BAN_PROJECTILE:       "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas shot by &l${killer}&r &cbut he wasn't banned"
+  NO_BAN_SONIC_BOOM:       "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fhe died from the shock wave &cbut he wasn't banned"
+  NO_BAN_STARVATION:       "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fhe died of starvation &cbut he wasn't banned"
+  NO_BAN_SUFFOCATION:      "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas bricked up in the wall  &cbut he wasn't banned"
+  NO_BAN_SUICIDE:          "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fcommit suicide &cbut he wasn't banned"
+  NO_BAN_THORNS:           "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwas killed trying to hurt &l${killer}&r &cbut he wasn't banned"
+  NO_BAN_VOID:             "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &ffell out of the world &cbut he wasn't banned"
+  NO_BAN_WITHER:           "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fwithered away &cbut he wasn't banned"
+  NO_BAN_OTHER:            "&7[&4&lHardcore &c&lMode&r&7] &r &cPlayer &f&l${player} &fdied &cbut he wasn't banned"
+
+# BLOCK_EXPLOSION   - Death from being in the area where the block explodes.
+# CONTACT           - Death caused when the player touches a block such as a Cactus, Dripstone (Stalagmite), or Berry Bush.
+# DRAGON_BREATH     - Death caused by a fire-breathing dragon.
+# DROWNING          - Death due to lack of air in the water.
+# ENTITY_ATTACK     - Death caused by an attack by another creature (monster / player).
+# ENTITY_EXPLOSION  - Death from being in an area when a creature such as the Creeper explodes.
+# FALL              - Death from falling from a height.
+# FALLING_BLOCK     - Death from hitting a falling block that deals damage.
+# FIRE              - Death caused by direct exposure to fire.
+# FIRE_TICK         - Death from burns from fire.
+# FLY_INTO_WALL     - Death caused by hitting a wall (elytra).
+# FREEZE            - Death due to freezing.
+# HOT_FLOOR         - Death caused when a player steps on Material.MAGMA_BLOCK.
+# LAVA              - Death from direct contact with lava.
+# LIGHTNING         - Death caused by a lightning strike.
+# MAGIC             - Death from being hit by a Damage Potion or spell.
+# POISON            - Death caused by an ongoing poison effect.
+# PROJECTILE        - Death caused by projectile (arrow, etc.).
+# SONIC_BOOM        - Death caused by a Sonic Boom attack from the Guardian.
+# STARVATION        - Death by starvation due to empty hunger bar.
+# SUFFOCATION       - Death by asphyxiation in the wall.
+# SUICIDE           - Suicide.
+# THORNS            - Death caused by retaliation against the Thorns spell attack.
+# VOID              - Death caused by falling outside the world.
+# WITHER            - Death by the effect of the Wither mixture.
+# OTHER             - Death caused by any of the other causes.
+
+#   ___   ___   ___   ___    ___   _____   ___
+#  | __| | __| | __| | __|  / __| |_   _| / __|
+#  | _|  | _|  | _|  | _|  | (__    | |   \__ \
+#  |___| |_|   |_|   |___|  \___|   |_|   |___/
+#
+
+# When a player dies, show lightning at the place of his death
+death-lightning: true
