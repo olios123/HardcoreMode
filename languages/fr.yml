@@ -1,81 +1,247 @@
 #
-# CC Creative Commons 2022
+# CC Creative Commons 2022-2023
 # Attribution-NoDerivatives 4.0 International
-# Auteur olios
+# Author olios
 #
-
+#
 # Vous pouvez utiliser des couleurs dans vos messages
 # https://minecraft.fandom.com/wiki/Formatting_codes
-
+#
 # IMPORTANT!
-# Toute modification de ce fichier nécessite le rechargement ou le redémarrage du serveur
-
-#   _       ___     ___   ___
-#  | |     / _ \   / __| / __|
-#  | |__  | (_) | | (_ | \__ \
-#  |____|  \___/   \___| |___/
+# Toute modification apportée à ce fichier nécessite le rechargement ou le redémarrage du serveur
 #
-enable-plugin: "Le plug-in HardcoreMode a été activé"
-disable-plugin: "Le plug-in HardcoreMode a été désactivé"
-loaded-language-file: "Le fichier de langue ${languageCode}.yml a été chargé"
-language-file-not-found: "Fichier de langue ${languageCode}.yml introuvable. Le fichier en.yml a été chargé"
-reload-complete: "La configuration du plugin HardcoreMode a été rechargée avec succès"
-#   _      ___  __   __  ___   ___
-#  | |    |_ _| \ \ / / | __| / __|
-#  | |__   | |   \ V /  | _|  \__ \
-#  |____| |___|   \_/   |___| |___/
 #
-lost-life: "&7[&4&lHardcore &c&lMode&r&7]&r &cTu es mort et tu as perdu une de tes vies"
-renewed-life: "&aUne de tes vies a été renouvelée"
-#    ___    ___    __  __   __  __     _     _  _   ___    ___
-#   / __|  / _ \  |  \/  | |  \/  |   /_\   | \| | |   \  / __|
-#  | (__  | (_) | | |\/| | | |\/| |  / _ \  | .` | | |) | \__ \
-#   \___|  \___/  |_|  |_| |_|  |_| /_/ \_\ |_|\_| |___/  |___/
+#    _____            _         _   _
+#   |_   _| _ __ _ __| |_  _ __| |_(_)___ _ _
+#     | || '_/ _` / _` | || / _|  _| / _ \ ' \
+#     |_||_| \__,_\__,_|\_,_\__|\__|_\___/_||_|
 #
+#         par olios [auteur du plugin]
+#         en utilisant Google Traduction
+#
+#
+#
+#  _______  ___      __   __  _______  ___   __    _
+# |       ||   |    |  | |  ||       ||   | |  |  | |
+# |    _  ||   |    |  | |  ||    ___||   | |   |_| |
+# |   |_| ||   |    |  |_|  ||   | __ |   | |       |
+# |    ___||   |___ |       ||   ||  ||   | |  _    |
+# |   |    |       ||       ||   |_| ||   | | | |   |
+# |___|    |_______||_______||_______||___| |_|  |__|
+#
+#
+#
+# ___________________________________________________________________________
+enable-plugin: "Le plugin HardcoreMode a été activé"
+disable-plugin: "Le plugin HardcoreMode a été désactivé"
+loaded-language-file: "Le fichier de langue %language%.yml a été chargé"
+language-file-not-found: "Fichier de langue %language%.yml introuvable. Le fichier en.yml a été chargé"
+reload-complete: "Configuration rechargée avec succès du plugin HardcoreMode"
+# ___________________________________________________________________________
+#
+#
+#
+#  __   __  ___   _______  _______
+# |  | |  ||   | |       ||       |
+# |  |_|  ||   | |    ___||  _____|
+# |       ||   | |   |___ | |_____
+# |       ||   | |    ___||_____  |
+#  |     | |   | |   |___  _____| |
+#   |___|  |___| |_______||_______|
+#
+#
+#
+# ___________________________________________________________________________
+renewed-life: "&7[&4&l❤&r&7]&r &aUne de vos vies a été renouvelée"
+# ___________________________________________________________________________
+#
+#
+#  _______  _______  __   __  __   __  _______  __    _  ______   _______  _______
+# |     __||       ||  |_|  ||  |_|  ||   _   ||  |  | ||      | |       ||       |
+# |    |   |   _   ||       ||       ||  |_|  ||   |_| ||  _    ||    ___||  _____|
+# |    |   |  | |  ||       ||       ||       ||       || | |   ||   |___ | |_____
+# |    |   |  |_|  ||       ||       ||       ||  _    || |_|   ||    ___||_____  |
+# |    |__||       || ||_|| || ||_|| ||   _   || | |   ||       ||   |___  _____| |
+# |_______||_______||_|   |_||_|   |_||__| |__||_|  |__||______| |_______||_______|
+#
+#
+# ___________________________________________________________________________
 cmd-lives-show: "&aLe nombre de vies sera désormais visible"
 cmd-lives-hide: "&aLe nombre de vies a été caché"
-cmd-lives-set: "&aLe nombre de vies pour &f${player} &aa été changé en &f${count}"
-cmd-lives-add: "&aLe nombre de vies pour &f${player} &aa été ajouté par &f${count}"
-cmd-lives-remove: "&aLe nombre de vies pour &f${player} &aa été supprimé par &f${count}"
-cmd-lives-incorrect-use: "&cVous avez mal utilisé cette commande. Aider &f/hardcoremode"
-cmd-lives-player-not-found: "&cLe lecteur spécifié est introuvable"
+cmd-lives-set: "&aLe nombre de vies de &f%player% &aété modifié et devient &f%count%"
+cmd-lives-add: "&aLe nombre de vies de &f%player% &aété ajouté par &f%count%"
+cmd-lives-remove: "&aLe nombre de vies pour &f%player% &aété supprimé par &f%count%"
+cmd-lives-all-set: "&aLe nombre de vies des &fjoueurs d'automne &aété modifié à &f%count%"
+cmd-lives-all-add: "&aLe nombre de vies des &fjoueurs d'automne &aété ajouté par &f%count%"
+cmd-lives-all-remove: "&aLe nombre de vies des &fjoueurs d'automne &aété supprimé de &f%count%"
+cmd-lives-incorrect-use: "&cVous avez mal utilisé cette commande. Aide &f/hardcoremode"
+cmd-lives-player-not-found: "&cLe lecteur spécifié n'a pas été trouvé"
 cmd-lives-amount-is-not-number: "&cLa valeur donnée n'est pas un nombre"
-#   ___   ___   ___   __  __   ___   ___   ___   ___    ___    _  _
-#  | _ \ | __| | _ \ |  \/  | |_ _| / __| / __| |_ _|  / _ \  | \| |
-#  |  _/ | _|  |   / | |\/| |  | |  \__ \ \__ \  | |  | (_) | | .` |
-#  |_|   |___| |_|_\ |_|  |_| |___| |___/ |___/ |___|  \___/  |_|\_|
-#
-no-permissions: "&cVous n'avez pas assez d'autorisations pour utiliser cette commande"
-console-command: "&cVous ne pouvez pas utiliser cette commande depuis la console"
-#     _     ___    __  __   ___   _  _
-#    /_\   |   \  |  \/  | |_ _| | \| |
-#   / _ \  | |) | | |\/| |  | |  | .` |
-#  /_/ \_\ |___/  |_|  |_| |___| |_|\_|
-#
-player-reload-complete: "&aLa configuration du plugin HardcoreMode a été rechargée avec succès"
-#   _  _   ___   _      ___
-#  | || | | __| | |    | _ \
-#  | __ | | _|  | |__  |  _/
-#  |_||_| |___| |____| |_|
-#
-help:
-  - "&c❤ &4&lHardcore &c&lMode &r&c❤"
-  - "&6Commandes:"
-  - "&ahardcoremode &6- &fafficher l'aide pour ce plugin (ce que vous voyez maintenant)"
-  - "&ahardcoremode reload &6- &frecharge la configuration du plugin HardcoreMode"
-  - "&alives <hide/show> &6- &fafficher ou masquer des informations sur les vies"
-  - "&alives <add/set/remove> [joueur] [montant] &6- &fgérer la vie des joueurs (admin)"
-  - "&6Permissions:"
-  - "&ahardcoremode.* &6- &ftoutes les permissions pour le plugin HardcoreMode"
-  - "&ahardcoremode.reload &6- &faccès à la commande &areload"
-  - "&ahardcoremode.lives &6- &faccès à la commande &alives &f(admin)"
+# ___________________________________________________________________________
+# Affichage des commandes
+cmd-about:
+  - "&cHardcoreMode &finintroduit un nouveau type de jeu sur serveur."
   - ""
-  - "&6Besoin d'aide?"
-  - "&a${link}"
-  - "&c❤ &4&lHardcore &c&lMode &r&c❤"
-#  _   _   ___   ___      _     _____   ___   ___
-# | | | | | _ \ |   \    /_\   |_   _| | __| / __|
-# | |_| | |  _/ | |) |  / _ \    | |   | _|  \__ \
-#  \___/  |_|   |___/  /_/ \_\   |_|   |___| |___/
+  - "&fLorsque vous mourez, vous perdez des vies, et lorsque vous les perdez toutes, vous obtenez un bannissement temporaire. Le plugin diversifie ainsi le gameplay sur le serveur et augmente son niveau de &cdifficulté&f."
+  - ""
+  - "&fDes vies s'ajoutent au fil du temps et les niveaux d'interdiction diminuent."
+  - ""
+  - "&fTapez &c/lives &fpour en savoir plus sur vos vies et vos niveaux de bannissement."
 #
-update: "Une version plus récente du plugin HardcoreMode est disponible, vous pouvez la télécharger à partir de ce lien &a${link}"
+cmd-lives:
+  - "&fVies: &c%hardcoremode_lives% &7Grâce à eux vous éviterez l'interdiction"
+  - "&Niveau de mort: &c%hardcoremode_death-level% &f(&c%hardcoremode_next-ban-time%&f) &7Spécifie le niveau de durée de l'interdiction"
+  - ""
+# Ces deux messages seront affichés dans la commande lives si les live et les options de réapparition sont activées dans la configuration ainsi que les options de niveau d'interdiction.
+#
+# Cette information n'apparaîtra pas si le joueur ne peut pas obtenir de vie supplémentaire / son bannissement Le niveau ne peut pas être réduit.
+cmd-lives-extra-life: "&fVous recevrez une vie supplémentaire dans: &c%hardcoremode_renewing-lives-time%"
+cmd-lives-ban-level: "&fVotre niveau de bannissement sera réduit dans: &c%hardcoremode_ban-level-time%"
+# ___________________________________________________________________________
+#
+#
+#  _______  __   __  _______  _______  ______    ___   _______  _______  _______  ___   _______  __    _  _______
+# |   _   ||  | |  ||       ||       ||    _ |  |   | |       ||   _   ||       ||   | |       ||  |  | ||       |
+# |  |_|  ||  | |  ||_     _||   _   ||   | ||  |   | |  _____||  |_|  ||_     _||   | |   _   ||   |_| ||  _____|
+# |       ||  |_|  |  |   |  |  | |  ||   |_||_ |   | | |_____ |       |  |   |  |   | |  | |  ||       || |_____
+# |       ||       |  |   |  |  |_|  ||    __  ||   | |_____  ||       |  |   |  |   | |  |_|  ||  _    ||_____  |
+# |   _   ||       |  |   |  |       ||   |  | ||   |  _____| ||   _   |  |   |  |   | |       || | |   | _____| |
+# |__| |__||_______|  |___|  |_______||___|  |_||___| |_______||__| |__|  |___|  |___| |_______||_|  |__||_______|
+#
+#
+# ___________________________________________________________________________
+no-permissions: "&cVous ne disposez pas de suffisamment d'autorisations pour utiliser cette commande"
+console-command: "&cVous ne pouvez pas utiliser cette commande depuis la console"
+# ___________________________________________________________________________
+#
+#
+#  _______  ______   __   __  ___   __    _  ___   _______  _______  ______    _______  _______  _______  __   __  ______
+# |   _   ||      | |  |_|  ||   | |  |  | ||   | |       ||       ||    _ |  |   _   ||       ||       ||  | |  ||    _ |
+# |  |_|  ||  _    ||       ||   | |   |_| ||   | |  _____||_     _||   | ||  |  |_|  ||_     _||    ___||  | |  ||   | ||
+# |       || | |   ||       ||   | |       ||   | | |_____   |   |  |   |_||_ |       |  |   |  |   |___ |  |_|  ||   |_||_
+# |       || |_|   ||       ||   | |  _    ||   | |_____  |  |   |  |    __  ||       |  |   |  |    ___||       ||    __  |
+# |   _   ||       || ||_|| ||   | | | |   ||   |  _____| |  |   |  |   |  | ||   _   |  |   |  |   |___ |       ||   |  | |
+# |__| |__||______| |_|   |_||___| |_|  |__||___| |_______|  |___|  |___|  |_||__| |__|  |___|  |_______||_______||___|  |_|
+#
+#
+# ___________________________________________________________________________
+player-reload-complete: "&aConfiguration rechargée avec succès du plugin HardcoreMode"
+# ___________________________________________________________________________
+#
+#
+#  _______  ______    ______    _______  __   __  ______    _______
+# |       ||    _ |  |    _ |  |       ||  | |  ||    _ |  |       |
+# |    ___||   | ||  |   | ||  |    ___||  | |  ||   | ||  |  _____|
+# |   |___ |   |_||_ |   |_||_ |   |___ |  |_|  ||   |_||_ | |_____
+# |    ___||    __  ||    __  ||    ___||       ||    __  ||_____  |
+# |   |___ |   |  | ||   |  | ||   |___ |       ||   |  | | _____| |
+# |_______||___|  |_||___|  |_||_______||_______||___|  |_||_______|
+#
+# ___________________________________________________________________________
+# Arguments
+argument-missing:
+  - "&cTous les arguments n’ont pas été avancés."
+  - "&cUtilisation de la commande: &f%command%"
+# ___________________________________________________________________________
+#
+#
+#  _______  __   __  _______  _______
+# |     __||  | |  ||   _   ||       |
+# |    |   |  |_|  ||  |_|  ||_     _|
+# |    |   |       ||       |  |   |
+# |    |   |       ||       |  |   |
+# |    |__||   _   ||   _   |  |   |
+# |_______||__| |__||__| |__|  |___|
+#
+#
+# ___________________________________________________________________________
+# Messages de mort
+next-death-info-message: "&7[&4&l❤&r&7]&r &cVotre heure de mort est terminée. La prochaine durée d'interdiction sera &f&l%time%"
+# ___________________________________________________________________________
+#
+# ___________________________________________________________________________
+# Message d'interdiction
+ban-reason:
+  - "&4&lHardcore Mode"
+  - "&r&cTu es mort et tu as été banni à temps &f&l%time%"
+  - "&cL'interdiction prend fin &f&l%full-date%"
+  - ""
+  - "%reason%"
+# ___________________________________________________________________________
+#
+# ___________________________________________________________________________
+# Raison du décès
+death-prefix: "&7[&4&l❤&r&7]&r"
+death-player-info: "&cJoueur &f&l%player%"
+#
+death-with-ban: "&cet peut être de retour sur le serveur dans &f&l%time%" # Lorsqu'un joueur est banni après sa mort
+death-without-ban: "&cet a perdu une de ses vies" # Quand un joueur n'est pas banni après sa mort
+#
+# IMPORTANT! Le message de mort final est composé de 4 éléments
+# death-prefix   +   death-player-info   +   death-reason   +   death-with-ban/death-without-ban
+#   préfixe    informations sur le joueur   raison du décès      mort avec ou sans interdiction
+#
+# IMPORTANT! Le message sur la cause du décès dans la fenêtre d'interdiction ressemble à ceci:
+#                         death-player-info   +   death-reason
+#                    informations sur le joueur    raison du décès
+#
+#
+#
+# Raisons des décès
+# CETTE OPTION PEUT CONTENIR DES ERREURS LIÉES À L'ACCÈS AU TUEUR DU JOUEUR
+death-reason:
+  BLOCK_EXPLOSION: "&fa explosé"
+  CONTACT: "&fa été enchaîné à mort"
+  DRAGON_BREATH: "&fmort du souffle du dragon"
+  DROWNING: "&fnoyé"
+  ENTITY_ATTACK: "&fa été tué par &l%killer%&r"
+  ENTITY_EXPLOSION: "&fmort de l'explosion"
+  FALL: "&ftombé d'un endroit élevé"
+  FALLING_BLOCK: "&fa été coincé par un bloc qui tombait"
+  FIRE: "&fbrûlé vif"
+  FIRE_TICK: "&fbrûlé vif"
+  FLY_INTO_WALL: "&fa volé dans le mur"
+  FREEZE: "&fgelé"
+  HOT_FLOOR: "&fj'ai découvert que le sol était en lave"
+  LAVA: "&fj'ai essayé de nager dans la lave"
+  LIGHTNING: "&fa été frappé par la foudre"
+  MAGIC: "&fa été tué par magie par &l%killer%&r"
+  POISON: "&fa été empoisonné"
+  PROJECTILE: "&fa été abattu par &l%killer%&r"
+  SONIC_BOOM: "&fil est mort de l'onde de choc"
+  STARVATION: "&fil est mort de faim"
+  SUFFOCATION: "&fétait maçonné dans le mur"
+  SUICIDE: "&fse suicider"
+  THORNS: "&fa été tué en essayant de blesser &l%killer%&r"
+  VOID: "&ftombé hors du monde"
+  WITHER: "&fflétri"
+  OTHER: "&fdécédé"
+#
+# BLOCK_EXPLOSION - Mort d'être dans la zone où le bloc explose.
+# CONTACT - Mort causée lorsque le joueur touche un bloc tel qu'un cactus, une pierre à goutte (stalagmite) ou un buisson de baies.sh.
+# DRAGON_BREATH – Mort causée par un dragon cracheur de feu.
+# DROWNING - Mort par manque d'air dans l'eau.
+# ENTITY_ATTACK - Mort provoquée par une attaque d'une autre créature (monstre/joueur).
+# ENTITY_EXPLOSION - Mort due à la présence dans une zone lorsqu'une créature telle que le Creeper explose.
+# FALL - Mort suite à une chute de hauteur.
+# FALLING_BLOCK - Mort en heurtant un bloc qui tombe et qui inflige des dégâts.
+# FIRE – Mort causée par une exposition directe au feu.
+# FIRE_TICK - Mort par brûlures dues au feu.
+# FLY_INTO_WALL - Mort causée par un choc contre un mur (élytres).
+# FREEZE - Mort due au gel.
+# HOT_FLOOR – Mort causée lorsqu'un joueur marche sur Material.MAGMA_BLOCK.
+# LAVA – Mort par contact direct avec la lave.
+# LIGHTNING - Mort causée par un coup de foudre.
+# MAGIC - Mort après avoir été touché par une potion de dégâts ou un sort.
+# POISON – Mort causée par un effet de poison continu.
+# PROJECTILE - Mort causée par un projectile (flèche, etc.).
+# SONIC_BOOM – Mort causée par une attaque Sonic Boom du Guardian.
+# STARVATION – Mort par famine due à une barre de faim vide.
+# SUFFOCATION – Mort par asphyxie dans le mur.
+# SUICIDE - Suicide.
+# THORNS - Mort causée par des représailles contre l'attaque du sort Épines.
+# VOID - Mort causée par une chute hors du monde.
+# WITHER - Mort par l'effet du mélange Wither.
+# OTHER – Décès causé par l’une des autres causes.
+#
+# ___________________________________________________________________________

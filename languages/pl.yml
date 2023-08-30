@@ -1,81 +1,247 @@
 #
-# CC Creative Commons 2022
-# Uznanie autorstwa - Bez utworów zależnych 4.0 Międzynarodowe
-# Autor olios
+# CC Creative Commons 2022-2023
+# Attribution-NoDerivatives 4.0 International
+# Author olios
 #
-
-# Możesz używać kolorów w wiadomościach
+#
+# Możesz używać kolorów w swoich wiadomościach
 # https://minecraft.fandom.com/wiki/Formatting_codes
-
-# WAŻNE!
-# Każde zmiany w tym pliku wymagają przeładowania serwera lub jego restartu
-
-#   _       ___     ___   ___
-#  | |     / _ \   / __| |_ _|
-#  | |__  | (_) | | (_ |  | |
-#  |____|  \___/   \___| |___|
 #
+# WAŻNE!
+# Wszelkie zmiany w tym pliku wymagają ponownego załadowania lub ponownego uruchomienia serwera
+#
+#
+#    _____ _                                _
+#   |_   _| |_  _ _ __  __ _ __ ______ _ _ (_)___
+#     | | | | || | '  \/ _` / _|_ / -_) ' \| / -_)
+#     |_| |_|\_,_|_|_|_\__,_\__/__\___|_||_|_\___|
+#
+#          przez olios [plugin author]
+#                oryginalny plik
+#
+#
+#
+#  _______  ___      __   __  _______  ___   __    _
+# |       ||   |    |  | |  ||       ||   | |  |  | |
+# |    _  ||   |    |  | |  ||    ___||   | |   |_| |
+# |   |_| ||   |    |  |_|  ||   | __ |   | |       |
+# |    ___||   |___ |       ||   ||  ||   | |  _    |
+# |   |    |       ||       ||   |_| ||   | | | |   |
+# |___|    |_______||_______||_______||___| |_|  |__|
+#
+#
+#
+# ___________________________________________________________________________
 enable-plugin: "Plugin HardcoreMode został włączony"
 disable-plugin: "Plugin HardcoreMode został wyłączony"
-loaded-language-file: "Plik językowy ${languageCode}.yml został załadowany"
-language-file-not-found: "Nie znaleziono pliku językowego ${languageCode}.yml. Plik en.yml został załadowany"
+loaded-language-file: "Plik językowy %language%.yml został załadowany"
+language-file-not-found: "Plik językowy %language%.yml nie został znaleziony. Plik en.yml został załadowany."
 reload-complete: "Pomyślnie przeładowano konfigurację pluginu HardcoreMode"
-#   ___  __   __  ___   _____   ___   __  __     ____ __   __   ___
-#  / __| \ \ / / / __| |_   _| | __| |  \/  |   |_  / \ \ / /  / __|
-#  \__ \  \ V /  \__ \   | |   | _|  | |\/| |    / /   \ V /  | (__
-#  |___/   |_|   |___/   |_|   |___| |_|  |_|   /___|   |_|    \___|
+# ___________________________________________________________________________
 #
-lost-life: "&7[&4&lHardcore &c&lMode&r&7]&r &cZginąłeś i straciłeś jedno ze swoich żyć"
-renewed-life: "&aJedno z twoich żyć zostało odnowione"
-#   _  __   ___    __  __   ___   _  _   ___   __   __
-#  | |/ /  / _ \  |  \/  | | __| | \| | |   \  \ \ / /
-#  | ' <  | (_) | | |\/| | | _|  | .` | | |) |  \ V /
-#  |_|\_\  \___/  |_|  |_| |___| |_|\_| |___/    |_|
 #
-cmd-lives-show: "&aLiczba żyć będzie od teraz widoczna"
-cmd-lives-hide: "&aLiczba żyć będzie od teraz ukryta"
-cmd-lives-set: "&aIlość żyć dla gracza &f${player} &azostała zmieniona na &f${count}"
-cmd-lives-add: "&aTIlość żyć dla gracza &f${player} &azostała powiększona o &f${count}"
-cmd-lives-remove: "&aIlość żyć dla gracza &f${player} &azostała pomniejszona o &f${count}"
-cmd-lives-incorrect-use: "&cUżyłeś tej komendy niewłaściwie. Pomoc &f/hardcoremode"
+#
+#  _______  __   __  _______  ___   _______
+# |       ||  | |  ||       ||   | |   _   |
+# |____   ||  |_|  ||       ||   | |  |_|  |
+#  ____|  ||       ||       ||   | |       |
+# | ______||_     _||      _||   | |       |
+# | |_____   |   |  |     |_ |   | |   _   |
+# |_______|  |___|  |_______||___| |__| |__|
+#
+#
+#
+# ___________________________________________________________________________
+renewed-life: "&7[&4&l❤&r&7]&r &aJedno z Twoich żyć zostało odnowione"
+# ___________________________________________________________________________
+#
+#
+#  ___   _  _______  __   __  _______  __    _  ______   __   __
+# |   | | ||       ||  |_|  ||       ||  |  | ||      | |  | |  |
+# |   |_| ||   _   ||       ||    ___||   |_| ||  _    ||  |_|  |
+# |      _||  | |  ||       ||   |___ |       || | |   ||       |
+# |     |_ |  |_|  ||       ||    ___||  _    || |_|   ||_     _|
+# |    _  ||       || ||_|| ||   |___ | | |   ||       |  |   |
+# |___| |_||_______||_|   |_||_______||_|  |__||______|   |___|
+#
+#
+# ___________________________________________________________________________
+cmd-lives-show: "&aInformacja o życiach będzie teraz widoczna"
+cmd-lives-hide: "&aInformacja o życiach będzie teraz ukryta"
+cmd-lives-set: "&aIlość żyć gracza &f%player% &azostała zmieniona na &f%count%"
+cmd-lives-add: "&aIlość żyć gracza &f%player% &azostała zwiększona o &f%count%"
+cmd-lives-remove: "&aIlość żyć gracza &f%player% &azostała zmniejszona o &f%count%"
+cmd-lives-all-set: "&aIlość żyć dla &fwszystkich graczy &azostała zmieniona na &f%count%"
+cmd-lives-all-add: "&aIlość żyć dla &fwszystkich graczy &azostała zwiększona o &f%count%"
+cmd-lives-all-remove: "&aIlość żyć dla &fwszystkich graczy &azostała zmniejszona o &f%count%"
+cmd-lives-incorrect-use: "&cUżyłeś tej komendy w niepoprawny sposób. Pomoc &f/hardcoremode"
 cmd-lives-player-not-found: "&cWskazany gracz nie został znaleziony"
 cmd-lives-amount-is-not-number: "&cPodana wartość nie jest liczbą"
-#   ___   ___   ___   __  __   ___   ___      _   ___
-#  | _ \ | __| | _ \ |  \/  | |_ _| / __|  _ | | | __|
-#  |  _/ | _|  |   / | |\/| |  | |  \__ \ | || | | _|
-#  |_|   |___| |_|_\ |_|  |_| |___| |___/  \__/  |___|
-#
-no-permissions: "&cNie masz wystarczających permisji aby użyć tej komendy"
-console-command: "&cNie możesz użyć tej komendy z konsoli"
-#     _     ___    __  __   ___   _  _
-#    /_\   |   \  |  \/  | |_ _| | \| |
-#   / _ \  | |) | | |\/| |  | |  | .` |
-#  /_/ \_\ |___/  |_|  |_| |___| |_|\_|
-#
-player-reload-complete: "&aPomyślnie przeładowano konfigurację pluginu HardcoreMode"
-#   ___    ___    __  __    ___     ___
-#  | _ \  / _ \  |  \/  |  / _ \   / __|
-#  |  _/ | (_) | | |\/| | | (_) | | (__
-#  |_|    \___/  |_|  |_|  \___/   \___|
-#
-help:
-  - "&c❤ &4&lHardcore &c&lMode &r&c❤"
-  - "&6Komendy:"
-  - "&ahardcoremode &6- &fpokazuje pomoc dla tego pluginu (to co teraz widzisz)"
-  - "&ahardcoremode reload &6- &fprzeładowuje konfiguracje pluginu HardcoreMode"
-  - "&alives <hide/show> &6- &fpokazyje lub ukrywa informacje o życiach"
-  - "&alives <add/set/remove> [player] [ilość] &6- &fzarządzanie życiami graczy (admin)"
-  - "&6Permisje:"
-  - "&ahardcoremode.* &6- &fwszystkie permisje dla pluginu HardcoreMode"
-  - "&ahardcoremode.reload &6- &fdostęp do komendy &ahardcoremode reload"
-  - "&ahardcoremode.lives &6- &fdostęp do komendy &alives <add/set/remove> (admin)"
+# ___________________________________________________________________________
+# Displaying commands
+cmd-about:
+  - "&cHardcoreMode &fwprowadza nowy tryb rozgrywki dla serwera."
   - ""
-  - "&6Potrzebujesz pomocy?"
-  - "&a${link}"
-  - "&c❤ &4&lHardcore &c&lMode &r&c❤"
-#    _     _  __  _____   _   _     _     _      ___   ____    _      ___      _   ___
-#   /_\   | |/ / |_   _| | | | |   /_\   | |    |_ _| |_  /   /_\    / __|  _ | | | __|
-#  / _ \  | ' <    | |   | |_| |  / _ \  | |__   | |   / /   / _ \  | (__  | || | | _|
-# /_/ \_\ |_|\_\   |_|    \___/  /_/ \_\ |____| |___| /___| /_/ \_\  \___|  \__/  |___|
+  - "&fKiedy zginiesz, stracisz życie, a kiedy stracisz je wszystkie, otrzymasz tymczasowego bana. Plugin urozmaica w ten sposób rozgrywkę na serwerze i zwiększa jej poziom &ctrudności&f."
+  - ""
+  - "&fZ czasem dodawane są życia, a poziom banów maleje."
+  - ""
+  - "&fWpisz &c/lives &faby dowiedzieć się o ilości żyć, ich odnawianiu oraz poziomie bana."
 #
-update: "Dostępna jest nowsza wersja pluginu HardcoreMode, możesz ją pobrać z tego linku &a${link}"
+cmd-lives:
+  - "&fŻycia: &c%hardcoremode_lives% &7Dzięki nim unikniesz bana po śmierci"
+  - "&fPoziom bana: &c%hardcoremode_death-level% &f(&c%hardcoremode_next-ban-time%&f) &7Określa długość bana po śmierci"
+  - ""
+# Te dwa komunikaty zostaną pokazane w poleceniu lives, jeśli live i opcje odradzania się są włączone w konfiguracji, podobnie jak opcje poziomu bana.
+#
+# Ta informacja nie pojawi się, jeśli gracz nie może otrzymać dodatkowego życia/banu poziomu nie można obniżyć.
+cmd-lives-extra-life: "&fOtrzymasz dodatkowe życie za: &c%hardcoremode_renewing-lives-time%"
+cmd-lives-ban-level: "&fTwój poziom bana zostanie obniżony za: &c%hardcoremode_ban-level-time%"
+# ___________________________________________________________________________
+#
+#
+#  _______  _______  ______    __   __  ___   _______      ___  _______
+# |       ||       ||    _ |  |  |_|  ||   | |       |    |   ||       |
+# |    _  ||    ___||   | ||  |       ||   | |  _____|    |   ||    ___|
+# |   |_| ||   |___ |   |_||_ |       ||   | | |_____     |   ||   |___
+# |    ___||    ___||    __  ||       ||   | |_____  | ___|   ||    ___|
+# |   |    |   |___ |   |  | || ||_|| ||   |  _____| ||       ||   |___
+# |___|    |_______||___|  |_||_|   |_||___| |_______||_______||_______|
+#
+#
+# ___________________________________________________________________________
+no-permissions: "&cNie masz wystarczających uprawnień, aby użyć tego polecenia"
+console-command: "&cNie możesz użyć tego polecenia z konsoli"
+# ___________________________________________________________________________
+#
+#
+#  _______  ______   __   __  ___   __    _  ___   _______  _______  ______    _______  _______  _______  ______
+# |   _   ||      | |  |_|  ||   | |  |  | ||   | |       ||       ||    _ |  |   _   ||       ||       ||    _ |
+# |  |_|  ||  _    ||       ||   | |   |_| ||   | |  _____||_     _||   | ||  |  |_|  ||_     _||   _   ||   | ||
+# |       || | |   ||       ||   | |       ||   | | |_____   |   |  |   |_||_ |       |  |   |  |  | |  ||   |_||_
+# |       || |_|   ||       ||   | |  _    ||   | |_____  |  |   |  |    __  ||       |  |   |  |  |_|  ||    __  |
+# |   _   ||       || ||_|| ||   | | | |   ||   |  _____| |  |   |  |   |  | ||   _   |  |   |  |       ||   |  | |
+# |__| |__||______| |_|   |_||___| |_|  |__||___| |_______|  |___|  |___|  |_||__| |__|  |___|  |_______||___|  |_|
+#
+#
+# ___________________________________________________________________________
+player-reload-complete: "&aPomyślnie przeładowano konfigurację pluginu HardcoreMode"
+# ___________________________________________________________________________
+#
+#
+#  _______  ___      _______  ______   __   __
+# |  _    ||   |    |       ||      | |  | |  |
+# | |_|   ||   |    |    ___||  _    ||  |_|  |
+# |       ||   |    |   |___ | | |   ||       |
+# |  _   | |   |___ |    ___|| |_|   ||_     _|
+# | |_|   ||       ||   |___ |       |  |   |
+# |_______||_______||_______||______|   |___|
+#
+# ___________________________________________________________________________
+# Argumenty
+argument-missing:
+  - "&cNie wszystkie argumenty zostały podane."
+  - "&cPoprawne użycie komendy: &f%command%"
+# ___________________________________________________________________________
+#
+#
+#  _______  __   __  _______  _______
+# |     __||  | |  ||   _   ||       |
+# |    |   |  |_|  ||  |_|  ||_     _|
+# |    |   |       ||       |  |   |
+# |    |   |       ||       |  |   |
+# |    |__||   _   ||   _   |  |   |
+# |_______||__| |__||__| |__|  |___|
+#
+#
+# ___________________________________________________________________________
+# Wiadomości po śmierci
+next-death-info-message: "&7[&4&l❤&r&7]&r &cCzas twojej śmierci dobiegł końca. Następna długość bana będzie wynosić &f&l%time%"
+# ___________________________________________________________________________
+#
+# ___________________________________________________________________________
+# Wiadomość o banie
+ban-reason:
+  - "&4&lHardcore Mode"
+  - "&r&cZginąłeś i zostałeś zbanowany na czas &f&l%time%"
+  - "&cBan kończy się &f&l%full-date%"
+  - ""
+  - "%reason%"
+# ___________________________________________________________________________
+#
+# ___________________________________________________________________________
+# Powód bana
+death-prefix: "&7[&4&l❤&r&7]&r"
+death-player-info: "&cGracz &f&l%player%"
+#
+death-with-ban: "&ci może wrócić na serwer za &f&l%time%" # Gdy gracz dostanie bana po śmierci
+death-without-ban: "&ci stracił jedno ze swoich żyć" # Gdy gracz nie zostanie zbanowany po śmierci
+#
+# WAŻNE! Ostateczna wiadomość o śmierci składa się z 4 elementów
+# death-prefix + death-player-info + death-reason + death-with-ban/death-without-ban
+#    prefix     informacja o graczu  powód śmierci      śmierć z / bez bana
+#
+# WAŻNE! Komunikat o przyczynie śmierci w oknie bana wygląda następująco:
+#                  death-player-info + death-reason
+#                 informacja o graczu  powód śmierci
+#
+#
+#
+# Powody śmierci
+# OPCJA TA MOŻE ZAWIERAĆ BŁĘDY ZWIĄZANE Z DOSTĘPEM DO ZABÓJCY GRACZA
+death-reason:
+  BLOCK_EXPLOSION: "&fwybuchł"
+  CONTACT: "&fzostał zakuty na śmierci"
+  DRAGON_BREATH: "&fzginął od oddechu smoka"
+  DROWNING: "&futonął"
+  ENTITY_ATTACK: "&fzostał zabity przez &l%killer%&r"
+  ENTITY_EXPLOSION: "&fwyleciał w powietrze"
+  FALL: "&fupadł z wysokości"
+  FALLING_BLOCK: "&fzostał przygnieciony przez spadający blok"
+  FIRE: "&fspłonął żywcem"
+  FIRE_TICK: "&fspłonął żywcem"
+  FLY_INTO_WALL: "&fwleciał w ścianę"
+  FREEZE: "&fzamarzł"
+  HOT_FLOOR: "&fdowiedział się, że podłoga to lava"
+  LAVA: "&fpróbował pływać w lawie"
+  LIGHTNING: "&fzostał porażony piorunem"
+  MAGIC: "&fzostał zabity magią przez &l%killer%&r"
+  POISON: "&fzostał otruty"
+  PROJECTILE: "&fzostał zastrzelony przez &l%killer%&r"
+  SONIC_BOOM: "&fzginął od fali uderzeniowej"
+  STARVATION: "&fumarł z głodu"
+  SUFFOCATION: "&fzatopił się w ścianie"
+  SUICIDE: "&fpopełnił samobójstwo"
+  THORNS: "&fzostał zabity próbując zabić &l%killer%&r"
+  VOID: "&fwypadł poza świat"
+  WITHER: "&fobumarł"
+  OTHER: "&fzginął"
+#
+# BLOCK_EXPLOSION   - Śmierć w wyniku przebywania w miejscu eksplozji bloku.
+# CONTACT           - Śmierć następuje, gdy gracz dotknie bloku, takiego jak kaktus, Dripstone (stalagmit) lub jagodowy krzak.
+# DRAGON_BREATH     - Śmierć spowodowana przez ziejącego ogniem smoka.
+# DROWNING          - Śmierć z powodu braku powietrza w wodzie.
+# ENTITY_ATTACK     - Śmierć spowodowana atakiem innego stworzenia (potwora/gracza).
+# ENTITY_EXPLOSION  - Śmierć w wyniku przebywania na obszarze, gdy eksploduje stworzenie takie jak Creeper.
+# FALL              - Śmierć w wyniku upadku z wysokości.
+# FALLING_BLOCK     - Śmierć od uderzenia w spadający blok, który zadaje obrażenia.
+# FIRE              - Śmierć wskutek bezpośredniego narażenia na ogień.
+# FIRE_TICK         - Śmierć w wyniku oparzeń od ognia.
+# FLY_INTO_WALL     - Śmierć wskutek uderzenia w ścianę (elytra).
+# FREEZE            - Śmierć wskutek zamarznięcia.
+# HOT_FLOOR         - Śmierć spowodowana nadepnięciem gracza na Material.MAGMA_BLOCK.
+# LAVA              - Śmierć w wyniku bezpośredniego kontaktu z lawą.
+# LIGHTNING         - Śmierć spowodowana uderzeniem pioruna.
+# MAGIC             - Śmierć w wyniku trafienia miksturą lub zaklęciem zadającym obrażenia.
+# POISON            - Śmierć spowodowana trwającym efektem trucizny.
+# PROJECTILE        - Śmierć spowodowana pociskiem (strzałą itp.).
+# SONIC_BOOM        - Śmierć spowodowana atakiem Sonic Boom ze strony Guardiana.
+# STARVATION        - Śmierć z głodu z powodu pustego baru głodowego.
+# SUFFOCATION       - Śmierć przez uduszenie w ścianę.
+# SUICIDE           - Samobójstwo.
+# THORNS            - Śmierć spowodowana odwetem za atak zaklęcia Cierni.
+# VOID              - Śmierć spowodowana upadkiem poza światem.
+# WITHER            - Śmierć pod wpływem mikstury Wither.
+# OTHER             - Śmierć spowodowana jakąkolwiek inną przyczyną.
+#
+# ___________________________________________________________________________

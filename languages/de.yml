@@ -1,0 +1,247 @@
+#
+# CC Creative Commons 2022-2023
+# Attribution-NoDerivatives 4.0 International
+# Autor: olios
+#
+#
+# Du kannst Farben in deinen Nachrichten verwenden
+# https://minecraft.fandom.com/wiki/Formatting_codes
+#
+# WICHTIG!
+# Änderungen an dieser Datei erfordern das Neuladen oder Neustarten des Servers
+#
+#
+#    _   _ _                     _
+#   (_) (_) |__  ___ _ _ ___ ___| |_ ____  _ _ _  __ _
+#   | |_| | '_ \/ -_) '_(_-</ -_)  _|_ / || | ' \/ _` |
+#    \___/|_.__/\___|_| /__/\___|\__/__|\_,_|_||_\__, |
+#
+#             von olios [Plugin-Autor]
+#        unter Verwendung von Google Translate
+#
+#
+#
+#  _______  ___      __   __  _______  ___   __    _
+# |       ||   |    |  | |  ||       ||   | |  |  | |
+# |    _  ||   |    |  | |  ||    ___||   | |   |_| |
+# |   |_| ||   |    |  |_|  ||   | __ |   | |       |
+# |    ___||   |___ |       ||   ||  ||   | |  _    |
+# |   |    |       ||       ||   |_| ||   | | | |   |
+# |___|    |_______||_______||_______||___| |_|  |__|
+#
+#
+#
+# ___________________________________________________________________________
+enable-plugin: "Das HardcoreMode-Plugin wurde aktiviert"
+disable-plugin: "Das HardcoreMode-Plugin wurde deaktiviert"
+loaded-language-file: "Die Sprachdatei %language%.yml wurde geladen"
+language-file-not-found: "Die Sprachdatei %language%.yml wurde nicht gefunden. Die Datei en.yml wurde geladen"
+reload-complete: "Die Konfiguration des HardcoreMode-Plugins wurde erfolgreich neu geladen"
+# ___________________________________________________________________________
+#
+#
+#
+#  ___      _______  _______  _______  __    _
+# |   |    |       ||  _    ||       ||  |  | |
+# |   |    |    ___|| |_|   ||    ___||   |_| |
+# |   |    |   |___ |       ||   |___ |       |
+# |   |___ |    ___||  _   | |    ___||  _    |
+# |       ||   |___ | |_|   ||   |___ | | |   |
+# |_______||_______||_______||_______||_|  |__|
+#
+#
+#
+# ___________________________________________________________________________
+renewed-life: "&7[&4&l❤&r&7]&r &aEines deiner Leben wurde erneuert"
+# ___________________________________________________________________________
+#
+#
+#  _______  _______  _______  _______  __   __  ___      _______
+# |  _    ||       ||       ||       ||  | |  ||   |    |       |
+# | |_|   ||    ___||    ___||    ___||  |_|  ||   |    |    ___|
+# |       ||   |___ |   |___ |   |___ |       ||   |    |   |___
+# |  _   | |    ___||    ___||    ___||       ||   |___ |    ___|
+# | |_|   ||   |___ |   |    |   |___ |   _   ||       ||   |___
+# |_______||_______||___|    |_______||__| |__||_______||_______|
+#
+#
+# ___________________________________________________________________________
+cmd-lives-show: "&aDie Anzahl der Leben wird jetzt angezeigt"
+cmd-lives-hide: "&aDie Anzahl der Leben wurde ausgeblendet"
+cmd-lives-set: "&aDie Anzahl der Leben für &f%player% &awurde auf &f%count% &ageändert"
+cmd-lives-add: "&aDie Anzahl der Leben für &f%player% &awurde um &f%count% &ahinzugefügt"
+cmd-lives-remove: "&aDie Anzahl der Leben für &f%player% &awurde um &f%count% &averringert"
+cmd-lives-all-set: "&aDie Anzahl der Leben für &falle Spieler &awurde auf &f%count% &ageändert"
+cmd-lives-all-add: "&aDie Anzahl der Leben für &falle Spieler &awurde um &f%count% &ahinzugefügt"
+cmd-lives-all-remove: "&aDie Anzahl der Leben für &falle Spieler &awurde um &f%count% &averringert"
+cmd-lives-incorrect-use: "&cDu hast diesen Befehl falsch verwendet. Hilfe unter &f/hardcoremode"
+cmd-lives-player-not-found: "&cDer angegebene Spieler wurde nicht gefunden"
+cmd-lives-amount-is-not-number: "&cDer eingegebene Wert ist keine Zahl"
+# ___________________________________________________________________________
+# Anzeige von Befehlen
+cmd-about:
+  - "&cHardcoreMode &fführt einen neuen Spielmodus auf dem Server ein."
+  - ""
+  - "&fWenn du stirbst, verlierst du Leben. Wenn du alle verlierst, wirst du vorübergehend gesperrt. Das Plugin diversifiziert das Gameplay auf dem Server und erhöht den &cSchwierigkeitsgrad&f."
+  - ""
+  - "&fÜber die Zeit werden Leben hinzugefügt und Sperrstufen verringert."
+  - ""
+  - "&fGib &c/lives &fein, um deine Leben und Sperrstufen zu erfahren."
+#
+cmd-lives:
+  - "&fLeben: &c%hardcoremode_lives% &7Damit kannst du einer Sperre entgehen"
+  - "&fSperrstufe: &c%hardcoremode_death-level% &f(&c%hardcoremode_next-ban-time%&f) &7Gibt die Länge der Sperrstufe an"
+  - ""
+# Diese beiden Nachrichten werden im Befehl "lives" angezeigt, wenn die Optionen für "live" und "respawn" in der Konfiguration aktiviert sind sowie die Optionen für die Sperrstufe.
+#
+# Diese Informationen werden nicht angezeigt, wenn der Spieler kein zusätzliches Leben bekommen kann oder seine Sperrstufe nicht verringert werden kann.
+cmd-lives-extra-life: "&fDu erhältst ein zusätzliches Leben in: &c%hardcoremode_renewing-lives-time%"
+cmd-lives-ban-level: "&fDeine Sperrstufe wird verringert in: &c%hardcoremode_ban-level-time%"
+# ___________________________________________________________________________
+#
+#
+#  _______  _______  ______    _______  _______  __   __  _______  ___   _______  __   __  __    _  _______  _______  __    _
+# |  _    ||       ||    _ |  |       ||       ||  | |  ||       ||   | |       ||  | |  ||  |  | ||       ||       ||  |  | |
+# | |_|   ||    ___||   | ||  |    ___||       ||  |_|  ||_     _||   | |    ___||  | |  ||   |_| ||    ___||    ___||   |_| |
+# |       ||   |___ |   |_||_ |   |___ |       ||       |  |   |  |   | |   | __ |  |_|  ||       ||   | __ |   |___ |       |
+# |  _   | |    ___||    __  ||    ___||      _||       |  |   |  |   | |   ||  ||       ||  _    ||   ||  ||    ___||  _    |
+# | |_|   ||   |___ |   |  | ||   |___ |     |_ |   _   |  |   |  |   | |   |_| ||       || | |   ||   |_| ||   |___ | | |   |
+# |_______||_______||___|  |_||_______||_______||__| |__|  |___|  |___| |_______||_______||_|  |__||_______||_______||_|  |__|
+#
+#
+# ___________________________________________________________________________
+no-permissions: "&cDu hast nicht genügend Berechtigungen, um diesen Befehl auszuführen"
+console-command: "&cDu kannst diesen Befehl nicht von der Konsole ausführen"
+# ___________________________________________________________________________
+#
+#
+#  _______  ______   __   __  ___   __    _  ___   _______  _______  ______    _______  _______  _______  ______
+# |   _   ||      | |  |_|  ||   | |  |  | ||   | |       ||       ||    _ |  |   _   ||       ||       ||    _ |
+# |  |_|  ||  _    ||       ||   | |   |_| ||   | |  _____||_     _||   | ||  |  |_|  ||_     _||   _   ||   | ||
+# |       || | |   ||       ||   | |       ||   | | |_____   |   |  |   |_||_ |       |  |   |  |  | |  ||   |_||_
+# |       || |_|   ||       ||   | |  _    ||   | |_____  |  |   |  |    __  ||       |  |   |  |  |_|  ||    __  |
+# |   _   ||       || ||_|| ||   | | | |   ||   |  _____| |  |   |  |   |  | ||   _   |  |   |  |       ||   |  | |
+# |__| |__||______| |_|   |_||___| |_|  |__||___| |_______|  |___|  |___|  |_||__| |__|  |___|  |_______||___|  |_|
+#
+#
+# ___________________________________________________________________________
+player-reload-complete: "&aDie Konfiguration des HardcoreMode-Plugins wurde erfolgreich neu geladen"
+# ___________________________________________________________________________
+#
+#
+#  _______  _______  __   __  ___      _______  ______
+# |       ||       ||  | |  ||   |    |       ||    _ |
+# |    ___||    ___||  |_|  ||   |    |    ___||   | ||
+# |   |___ |   |___ |       ||   |    |   |___ |   |_||_
+# |    ___||    ___||       ||   |___ |    ___||    __  |
+# |   |    |   |___ |   _   ||       ||   |___ |   |  | |
+# |___|    |_______||__| |__||_______||_______||___|  |_|
+#
+# ___________________________________________________________________________
+# Argumente
+argument-missing:
+  - "&cNicht alle Argumente wurden angegeben."
+  - "&cVerwende den Befehl: &f%command%"
+# ___________________________________________________________________________
+#
+#
+#  _______  ___      _______  __   __  ______   _______  ______    __    _
+# |       ||   |    |   _   ||  | |  ||      | |       ||    _ |  |  |  | |
+# |    _  ||   |    |  |_|  ||  | |  ||  _    ||    ___||   | ||  |   |_| |
+# |   |_| ||   |    |       ||  |_|  || | |   ||   |___ |   |_||_ |       |
+# |    ___||   |___ |       ||       || |_|   ||    ___||    __  ||  _    |
+# |   |    |       ||   _   ||       ||       ||   |___ |   |  | || | |   |
+# |___|    |_______||__| |__||_______||______| |_______||___|  |_||_|  |__|
+#
+#
+# ___________________________________________________________________________
+# Todesnachrichten
+next-death-info-message: "&7[&4&l❤&r&7]&r &cDie Zeit deines Todes ist vorbei. Die nächste Sperrstufe wird &f&l%time%&r sein"
+# ___________________________________________________________________________
+#
+# ___________________________________________________________________________
+# Bann-Nachricht
+ban-reason:
+  - "&4&lHardcore Mode"
+  - "&r&cDu bist gestorben und wurdest für &f&l%time%&r gesperrt"
+  - "&cDie Sperre endet am &f&l%full-date%&r"
+  - ""
+  - "%reason%"
+# ___________________________________________________________________________
+#
+# ___________________________________________________________________________
+# Todesursache
+death-prefix: "&7[&4&l❤&r&7]&r"
+death-player-info: "&cSpieler &f&l%player%&r"
+#
+death-with-ban: "&cund kann wieder auf den Server kommen in &f&l%time%" # Wenn ein Spieler nach dem Tod gesperrt wird
+death-without-ban: "&cund hat eines seiner Leben verloren" # Wenn ein Spieler nach dem Tod nicht gesperrt wird
+#
+# WICHTIG! Die endgültige Todesnachricht setzt sich aus 4 Elementen zusammen
+# death-prefix + death-player-info + death-reason + death-with-ban/death-without-ban
+#    Präfix       Info über den Spieler  Todesursache    Tod mit oder ohne Sperre
+#
+# WICHTIG! Die Nachricht über die Todesursache im Bann-Fenster sieht so aus:
+#                           death-player-info + death-reason
+#                           Info über den Spieler  Todesursache
+#
+#
+#
+# Gründe für den Tod
+# DIESE OPTION KANN FEHLER IM ZUSAMMENHANG MIT DEM ZUGRIFF AUF DEN TÄTER DES SPIELERS ENTHALTEN
+death-reason:
+  BLOCK_EXPLOSION: "&fexplodierte"
+  CONTACT: "&fwurde zu Tode gequetscht"
+  DRAGON_BREATH: "&fstarb am Atem des Drachens"
+  DROWNING: "&fertrank"
+  ENTITY_ATTACK: "&fwurde von &l%killer%&r getötet"
+  ENTITY_EXPLOSION: "&fstarb bei der Explosion"
+  FALL: "&ffiel aus großer Höhe"
+  FALLING_BLOCK: "&fwurde von einem herabfallenden Block erdrückt"
+  FIRE: "&fverbrannte lebendig"
+  FIRE_TICK: "&fverbrannte lebendig"
+  FLY_INTO_WALL: "&fflog gegen die Wand"
+  FREEZE: "&ffror ein"
+  HOT_FLOOR: "&ffand heraus, dass der Boden aus Lava besteht"
+  LAVA: "&fversuchte in Lava zu schwimmen"
+  LIGHTNING: "&fwurde vom Blitz getroffen"
+  MAGIC: "&fwurde von Magie von &l%killer%&r getötet"
+  POISON: "&fwurde vergiftet"
+  PROJECTILE: "&fwurde von &l%killer%&r angeschossen"
+  SONIC_BOOM: "&fstarb durch die Schockwelle"
+  STARVATION: "&fstarb am Hungertod"
+  SUFFOCATION: "&fwurde in der Wand eingemauert"
+  SUICIDE: "&ebegeht Selbstmord"
+  THORNS: "&fwurde beim Versuch, &l%killer%&r zu verletzen, getötet"
+  VOID: "&ffiel aus der Welt"
+  WITHER: "&fverschwand durch den Effekt des Wither-Tranks"
+  OTHER: "&fstarb"
+#
+# BLOCK_EXPLOSION   - Tod durch das Befinden in der Zone, in der der Block explodiert.
+# CONTACT           - Tod durch Berührung eines Blocks wie Kaktus, Tropfstein (Stalagmit) oder Beerenstrauch.
+# DRAGON_BREATH     - Tod durch den Feueratem eines Drachens.
+# DROWNING          - Tod aufgrund von Luftmangel im Wasser.
+# ENTITY_ATTACK     - Tod durch Angriff eines anderen Wesens (Monster / Spieler).
+# ENTITY_EXPLOSION  - Tod durch das Befinden in einem Bereich, in dem z. B. der Creeper explodiert.
+# FALL              - Tod durch Sturz aus großer Höhe.
+# FALLING_BLOCK     - Tod durch Aufprall eines herabfallenden Blocks, der Schaden verursacht.
+# FIRE              - Tod durch direkte Exposition gegenüber Feuer.
+# FIRE_TICK         - Tod durch Verbrennungen durch Feuer.
+# FLY_INTO_WALL     - Tod durch Aufprall auf eine Wand (Elytra).
+# FREEZE            - Tod durch Erfrieren.
+# HOT_FLOOR         - Tod durch Betreten von Material.MAGMA_BLOCK.
+# LAVA              - Tod durch direkten Kontakt mit Lava.
+# LIGHTNING         - Tod durch Blitzschlag.
+# MAGIC             - Tod durch Treffer mit einem Damage Potion oder Zauber.
+# POISON            - Tod durch anhaltende Giftwirkung.
+# PROJECTILE        - Tod durch Projektil (Pfeil usw.).
+# SONIC_BOOM        - Tod durch den Angriff der Schockwelle des Wächters.
+# STARVATION        - Tod durch Verhungern aufgrund eines leeren Hungerbalkens.
+# SUFFOCATION       - Tod durch Ersticken in der Wand.
+# SUICIDE           - Selbstmord.
+# THORNS            - Tod durch Racheangriff gegen den Thorns-Zauberangriff.
+# VOID              - Tod durch Sturz außerhalb der Welt.
+# WITHER            - Tod durch die Wirkung des Wither-Trankes.
+# OTHER             - Tod durch eine andere Ursache.
+#
+# ___________________________________________________________________________
