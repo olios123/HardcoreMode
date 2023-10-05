@@ -9,6 +9,6 @@ ___
 
 <p style="display: flex; justify-content: center;">
 <a href="https://www.spigotmc.org/resources/hardcoremode-temporary-bans-after-death.104642/"><img src="https://cdn.discordapp.com/attachments/1009784232601718825/1154026324755746836/DoscNew.png" /></a>
-  <a href="https://discord.gg/qQ4SUhn5SF"><img src="https://cdn.discordapp.com/attachments/1009784232601718825/1154026324516687982/DiscordNew.png" /></a>
+  <a href="https://discord.gg/kE6eptDu3W"><img src="https://cdn.discordapp.com/attachments/1009784232601718825/1154026324516687982/DiscordNew.png" /></a>
   <a href="https://paypal.me/oliosdonate?country.x=PL&locale.x=pl_PL"><img src="https://cdn.discordapp.com/attachments/1009784232601718825/1154026324298580028/PaypalNew.png" /></a>
 </p>
