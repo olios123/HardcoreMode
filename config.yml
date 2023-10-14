@@ -212,6 +212,15 @@ lives:
   - "&4> &c> &4>   &c❤ &4&lBAN AFTER DEATH &r&c❤   &4< &c< &4<"
   - "&4> &4> &c>   &c❤ &4&lBAN AFTER DEATH &r&c❤   &c< &4< &4<"
   - "&4> &4> &4>   &c❤ &4&lBAN AFTER DEATH &r&c❤   &4< &4< &4<"
+  # You can also change the type to display the number of deaths. (%hardcoremode_deaths%)
+  # If you want to use death instead of lives, you also need to change the information in bar-info and no-lives-info to the same.
+  # e.g.
+  # bar-info:
+  # - "&4> &4> &4>   &c❤ &l&fDeaths: &c%hardcoremode_deaths% &c❤   &4< &4< &4<"
+  #
+  # no-lives-info:
+  # - "&4> &4> &4>   &c❤ &l&fDeaths: &c%hardcoremode_deaths% &c❤   &4< &4< &4<"
+  #
   #
   # Initial number of lives.
   default-count: 3
