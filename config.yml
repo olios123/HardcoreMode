@@ -70,7 +70,7 @@ ban-type: "increasing" # The time of each ban is getting longer and longer.
 # This way you can ban ip or BungeeCord servers.
 # Placeholders:
 # %hardcoremode_player% - player who died
-# %reason% - ban reason
+# %reason% - death reason
 # %date% - end ban date (timestamp)
 # %time% - ban time in min
 # IMPORTANT! Do not add "/" before the command - the command will not work
