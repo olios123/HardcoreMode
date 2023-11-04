@@ -74,9 +74,8 @@ cmd-lives-remove: "&aThe amount of lives for &f%player% &ahas been removed by &f
 cmd-lives-all-set: "&aThe number of lives for &fall players &ahas been changed to &f%count%"
 cmd-lives-all-add: "&aThe number of lives for &fall players &ahas been added by &f%count%"
 cmd-lives-all-remove: "&aThe amount of lives for &fall players &ahas been removed by &f%count%"
-cmd-lives-incorrect-use: "&cYou have used this command incorrectly. Help &f/hardcoremode"
-cmd-lives-player-not-found: "&cThe specified player was not found"
 cmd-lives-amount-is-not-number: "&cThe given value is not a number"
+cmd-unbanned: "&aThe player has been unbanned"
 # ___________________________________________________________________________
 # Displaying commands
 cmd-about:
@@ -142,6 +141,9 @@ player-reload-complete: "&aSuccessfully reloaded configuration of HardcoreMode p
 argument-missing:
   - "&cNot all arguments were given."
   - "&cUsing the command: &f%command%"
+cmd-incorrect-use: "&cYou have used this command incorrectly. Help &f/hardcoremode"
+cmd-player-not-found: "&cThe specified player was not found"
+cmd-not-banned: "&cThis player is not banned"
 # ___________________________________________________________________________
 #
 #
