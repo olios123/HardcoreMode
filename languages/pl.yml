@@ -74,9 +74,8 @@ cmd-lives-remove: "&aIlość żyć gracza &f%player% &azostała zmniejszona o &f
 cmd-lives-all-set: "&aIlość żyć dla &fwszystkich graczy &azostała zmieniona na &f%count%"
 cmd-lives-all-add: "&aIlość żyć dla &fwszystkich graczy &azostała zwiększona o &f%count%"
 cmd-lives-all-remove: "&aIlość żyć dla &fwszystkich graczy &azostała zmniejszona o &f%count%"
-cmd-lives-incorrect-use: "&cUżyłeś tej komendy w niepoprawny sposób. Pomoc &f/hardcoremode"
-cmd-lives-player-not-found: "&cWskazany gracz nie został znaleziony"
 cmd-lives-amount-is-not-number: "&cPodana wartość nie jest liczbą"
+cmd-unbanned: "&aGracz został odbanowany"
 # ___________________________________________________________________________
 # Displaying commands
 cmd-about:
@@ -142,6 +141,9 @@ player-reload-complete: "&aPomyślnie przeładowano konfigurację pluginu Hardco
 argument-missing:
   - "&cNie wszystkie argumenty zostały podane."
   - "&cPoprawne użycie komendy: &f%command%"
+cmd-incorrect-use: "&cUżyłeś tej komendy w niewłaściwy sposób. Pomoc &f/hardcoremode"
+cmd-player-not-found: "&cWskazany gracz nie został odnaleziony"
+cmd-not-banned: "&cTen gracz nie jest zbanowany"
 # ___________________________________________________________________________
 #
 #
