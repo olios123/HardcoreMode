@@ -74,9 +74,8 @@ cmd-lives-remove: "&aLe nombre de vies pour &f%player% &aété supprimé par &f%
 cmd-lives-all-set: "&aLe nombre de vies des &fjoueurs d'automne &aété modifié à &f%count%"
 cmd-lives-all-add: "&aLe nombre de vies des &fjoueurs d'automne &aété ajouté par &f%count%"
 cmd-lives-all-remove: "&aLe nombre de vies des &fjoueurs d'automne &aété supprimé de &f%count%"
-cmd-lives-incorrect-use: "&cVous avez mal utilisé cette commande. Aide &f/hardcoremode"
-cmd-lives-player-not-found: "&cLe lecteur spécifié n'a pas été trouvé"
 cmd-lives-amount-is-not-number: "&cLa valeur donnée n'est pas un nombre"
+cmd-unbanned: "&aLe joueur a été débanni"
 # ___________________________________________________________________________
 # Affichage des commandes
 cmd-about:
@@ -142,6 +141,9 @@ player-reload-complete: "&aConfiguration rechargée avec succès du plugin Hardc
 argument-missing:
   - "&cTous les arguments n’ont pas été avancés."
   - "&cUtilisation de la commande: &f%command%"
+cmd-incorrect-use: "&cVous avez mal utilisé cette commande. Aide &f/hardcoremode"
+cmd-player-not-found: "&cLe lecteur spécifié n'a pas été trouvé"
+cmd-not-banned: "&cCe joueur n'est pas banni"
 # ___________________________________________________________________________
 #
 #
