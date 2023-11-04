@@ -70,7 +70,7 @@ ban-type: "increasing" # The time of each ban is getting longer and longer.
 # This way you can ban ip or BungeeCord servers.
 # Placeholders:
 # %hardcoremode_player% - player who died
-# %reason% - death reason
+# %reason% - ban reason
 # %date% - end ban date (timestamp)
 # %time% - ban time in min
 # IMPORTANT! Do not add "/" before the command - the command will not work
@@ -300,6 +300,17 @@ death-lightning: true
 # The amount of blood depends on the amount of damage taken.
 # Blood will not always appear, e.g. when drowning
 blood: true
+# *------------------------------------*
+#
+#
+# *------------------------------------*
+# :                NICK                :
+# *------------------------------------*
+# You can display (preferably short) information before the player's nickname.
+# This may be, for example, the number of his lives or the number of his deaths.
+# If you do not want additional information to be shown before the player's nickname, leave this field blank (To apply the changes you must restart the server).
+nick-info: "&c ❤%hardcoremode_lives% | &r"
+#nick-info: "&7 ☠%hardcoremode_deaths% | &r"
 # *------------------------------------*
 #
 #
