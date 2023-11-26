@@ -1,0 +1,61 @@
+# You can store your plugin data in the database.
+# Current supported databases are: MySQL
+#
+# To connect to the database you must enable this option in config.yml
+# Without this, the plugin will not connect to the specified database.
+#
+# Data needed to connect to the database:
+host: "localhost"
+port: 3306
+user: "root"
+password: ""
+database: "hardcoremode"
+#
+# Update frequency
+# The plugin regularly sends information to the player database.
+# Below you can change the data sending frequency value in SECONDS.
+# ATTENTION! Setting the update time very slowly may lead to server slowdown, plugin stutter or database problems.
+# ATTENTION! Providing such a value may also result in the database server considering it a DDoS attack. The author of the plugin is not responsible for using this option incorrectly.
+update-frequency: 60 # seconds
+#
+# The database user needs the following permissions: SELECT, INSERT, UPDATE, USE, CREATE DATABASE, CREATE TABLE
+# Lack of necessary permissions may result in improper operation of the plugin and displaying errors in the console.
+#
+# If the plugin does not find the specified database on the server, it will create it along with all the necessary tables.
+# Also if any tables are missing, they will be created.
+#
+#   _____    _    ___  ___  _     ___
+#  |_   _|  /_\  | _ )| __|| |   / __|
+#    | |   / _ \ | _ \| _| | |__ \__ \
+#    |_|  /_/ \_\|___/|___||____||___/
+#
+# CREATE TABLE `deaths` (
+#   `id` int(11) NOT NULL AUTO_INCREMENT,
+#   `UUID` varchar(36) NOT NULL,
+#   `name` text NOT NULL,
+#   `displayName` text NOT NULL,
+#   `banned` tinyint(1) NOT NULL,
+#   `deathLevelBefore` int(11) DEFAULT NULL,
+#   `deathLevelNow` int(11) DEFAULT NULL,
+#   `livesBefore` int(11) DEFAULT NULL,
+#   `livesNow` int(11) DEFAULT NULL,
+#   `banStartDate` int(11) DEFAULT NULL,
+#   `banEndDate` int(11) DEFAULT NULL,
+#   `banTime` double DEFAULT NULL,
+#   `banReason` mediumtext DEFAULT NULL,
+#   PRIMARY KEY (`id`),
+#   UNIQUE KEY `id` (`id`)
+# ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
+#
+# CREATE TABLE `players` (
+#   `UUID` varchar(36) NOT NULL,
+#   `name` text NOT NULL,
+#   `displayName` text NOT NULL,
+#   `lastBan` tinyint(1) NOT NULL,
+#   `deathLevel` int(11) NOT NULL,
+#   `deaths` int(11) NOT NULL,
+#   `lives` int(11) NOT NULL,
+#   `livesInfo` tinyint(1) NOT NULL,
+#   PRIMARY KEY (`UUID`),
+#   UNIQUE KEY `UUID` (`UUID`)
+# ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
