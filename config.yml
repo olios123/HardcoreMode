@@ -47,6 +47,15 @@ clearer-logs: false
 # *------------------------------------*
 #
 #
+# *------------------------------------*
+# :          DATABASE (MySQL)          :
+# *------------------------------------*
+# Connect and stores data in a database.
+# The rest of the options are in the database.yml file.
+database: false
+# *------------------------------------*
+#
+#
 #  _______  _______  __    _  _______  ___   _______  __   __  ______    _______  _______  ___   _______  __    _
 # |       ||       ||  |  | ||       ||   | |       ||  | |  ||    _ |  |   _   ||       ||   | |       ||  |  | |
 # |     __||   _   ||   |_| ||    ___||   | |    ___||  | |  ||   | ||  |  |_|  ||_     _||   | |   _   ||   |_| |
@@ -78,6 +87,14 @@ custom-ban-command:
   enable: false
   # If you enable this feature, the plugin will execute a command or list of commands instead of using its built-in system.
   cmd: "ban %hardcoremode_player% %reason% %time%"
+#
+# Commands executed after returning to the server after a ban.
+# The plugin will continue to display information about the next ban time.
+return-command:
+  enable: false
+  # You can write commands starting with dashes, and they will be executed in the given order.
+  cmd:
+    - 'tellraw @a {"text":"&cThe player &l&f%hardcoremode_player% &r&creturned to the server after being banned"}'
 # *------------------------------------*
 #
 #
@@ -330,4 +347,47 @@ nick-info: "&c ❤%hardcoremode_lives% | &r"
 time-format: "HH:mm"
 date-format: "dd.MM.yyyy"
 full-date-format: "HH:mm dd.MM.yyyy"
+# *------------------------------------*
+#
+#
+# *------------------------------------*
+# :            LEADERBOARD             :
+# *------------------------------------*
+# Leaderboard options
+# Specify what the plugin should do if the selected option is empty, e.g. Leaderboard has a size of 10, but there are only 5 players.
+leaderboard-empty: none
+# You can use the following options here:
+# * none - Leaderboard will return an empty string.
+# 1. player1 - 10❤
+# 2. player2 - 7❤
+# 3. player3 - 3❤
+#
+#
+# *---------------*
+# * last - Leaderboard will return the last available leaderboard value.
+# 1. player1 - 10❤
+# 2. player2 - 7❤
+# 3. player3 - 3❤
+# 3. player3 - 3❤
+# 3. player3 - 3❤
+# *---------------*
+# * "some text" - Leaderboard will display the entered text.
+# 1. player1 - 10❤
+# 2. player2 - 7❤
+# 3. player3 - 3❤
+# no value
+# no value
+#
+# Determine the format of the leaderboard appearance for lives.
+# This section uses two placeholders:
+# * %hardcoremode_leaderboard_lives_<size>% - Leaderboard in the scope of a given position.
+# * %hardcoremode_leaderboard_lives_pos_<position>% - A specific position in the leaderboard.
+# Some plugins do not support multiple lines of text, so sometimes it is necessary to refer to each line separately.
+leaderboard-format-lives: "&7%position%. &f%hardcoremode_player% &8- &c%value%❤"
+# Determine the format of the leaderboard appearance for deaths.
+# This section uses two placeholders:
+# * %hardcoremode_leaderboard_deaths_<size>% - Leaderboard in the scope of a given position.
+# * %hardcoremode_leaderboard_deaths_pos_<position>% - A specific position in the leaderboard.
+# Some plugins do not support multiple lines of text, so sometimes it is necessary to refer to each line separately.
+leaderboard-format-deaths: "&7%position%. &f%hardcoremode_player% &8- &7%value%☠"
 # *------------------------------------*
