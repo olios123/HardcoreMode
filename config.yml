@@ -216,6 +216,7 @@ lives:
   # The information will be displayed above the player's inventory bar.
   # The bar can be animated.
   # Change update frequency is 0.5 seconds.
+  bar-info-enabled: true # Turn the bar on or off
   bar-info:
   - "&c> &4> &4>   &c❤ %hardcoremode_lives% &fLives &c❤   &4< &4< &c<"
   - "&4> &c> &4>   &c❤ %hardcoremode_lives% &fLives &c❤   &4< &c< &4<"
@@ -224,6 +225,7 @@ lives:
   #
   # Information will appear instead of bar-info when the player has 0 lives.
   # Will be banned after death.
+  no-lives-info-enabled: true # Turn the bar on or off
   no-lives-info:
   - "&c> &4> &4>   &c❤ &4&lBAN AFTER DEATH &r&c❤   &4< &4< &c<"
   - "&4> &c> &4>   &c❤ &4&lBAN AFTER DEATH &r&c❤   &4< &c< &4<"
@@ -244,6 +246,12 @@ lives:
   #
   # Maximum number of lives.
   max-count: 3
+  #
+  # Number of lives after death.
+  # After returning to the server, the player can receive a certain number of lives or for example start with the basic number (default-count).
+  # You can only enter a number here.
+  # Lives are only awarded to the player upon returning to the server after death.
+  after-death: 3 # If 0, the player will have to wait until his life is restored.
   #
   # The player will receive life some time after the last death.
   # The number of lives added will not be greater than the initial amount.
