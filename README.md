@@ -1,7 +1,9 @@
 # HardcoreMode Files
+<img src="https://cdn.discordapp.com/attachments/1009784232601718825/1146483088369647656/Banner.png" />
+
 The files in this repository are for the [HardocreMode](https://www.spigotmc.org/resources/hardcoremode-temporary-bans-after-death-%E2%9D%A4%EF%B8%8F-1-14-x-1-19-x.104642/) plugin.
 
-The files are compatible with plugin the version: <code>3.0</code>
+The files are compatible with plugin the version: <code>3.1</code>
 
 ___
 
